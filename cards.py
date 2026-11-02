@@ -31,8 +31,7 @@ class decks:
 # Define the class for individual cards
 class cards:
     suit = ["hearts","spades","clubs","diamonds"]
-    number = ["two","three","four","five","six","seven","eight","nine","ten",
-                    "jack","queen","king", "ace"]
+    number = ["two","three","four","five","six","seven","eight","nine","ten","jack","queen","king", "ace"]
 
     def __init__(self, suit, number, card_name):
         self.suit = suit
@@ -46,9 +45,6 @@ class cards:
         number = random.choice(self.number)
         return f"{number} of {suit}"
 
-
-deck1 = decks("Deck 1")
-print(deck1.cards)
 
 
 
