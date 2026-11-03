@@ -1,4 +1,5 @@
 # This is the main file for our war game. This is where we will put all of our code that will run the game. 
+
 from cards import cards
 from cards import decks
 from player import players
@@ -16,18 +17,29 @@ def finish_game():
 
 def main():
 
-    player1 = players(input("Player 1, please enter your name: "))
-    player2 = players(input("Player 2, please enter your name: "))
+    player1 = players(1)
+    player2 = players(2)
 
-    #initialize player decks
 
     print('Welcome to Two-Deck War!')
 
     # start game loop
-    #while player hand<104
+    while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
+        player1.takecards(player2)
+
         #players draw
-        # Player 1 drew the 9 of Hearts.
-        # Player 2 drew the 4 of Spades.
+
+        # player1_card = player1.drawcard()
+        # player2_card = player2.drawcard()
+
+
+        # # Player 1 drew the 9 of Hearts.
+        # # Player 2 drew the 4 of Spades.
+
+        # print(f"\nPlayer 1 drew the {player1_card.number} of {player1_card.suit}.")
+        # print(f"\nPlayer 2 drew the {player2_card.number} of {player2_card.suit}.")
+
+        
         #blank print
         #print # Player 1 wins the round!
 
