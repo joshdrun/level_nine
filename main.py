@@ -24,8 +24,8 @@ def main():
     print('Welcome to Two-Deck War!')
 
     # start game loop
-    while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
-        player1.takecards(player2)
+    # while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
+    #     player1.takecards(player2)
 
         #players draw
 

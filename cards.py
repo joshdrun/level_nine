@@ -9,7 +9,7 @@ class decks:
         self.name = name
         self.cards = []
         self.fill_deck()
-
+        self.shuffledeck()
 
 
 # Define a method to fill the deck with all cards
