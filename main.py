@@ -3,14 +3,43 @@ from cards import cards
 from cards import decks
 from player import players
 
-player1 = players(input("Player 1, please enter your name: "))
-player2 = players(input("Player 2, please enter your name: "))
+def hand_check():
+    # Player 1 has 53 cards.
+    # Player 2 has 51 cards.
+    pass
 
-player1.takecards(player2)
+def finish_game():
+    # Player 1 has collected all of the cards.
 
-#test1 = deck1.cards.index(deck1.cards[48])
-#test2 = deck1.cards.index(deck1.cards[30])
-#if test1 > test2:
-#    print(f"{deck1.cards[test1].card_name} is higher than {deck1.cards[test2].card_name}")
-#else:
-#    print(f"{deck1.cards[test2].card_name} is higher than {deck1.cards[test1].card_name}")
+    # Player 1 wins the game!
+    pass
+
+def main():
+
+    player1 = players(input("Player 1, please enter your name: "))
+    player2 = players(input("Player 2, please enter your name: "))
+
+    #initialize player decks
+
+    print('Welcome to Two-Deck War!')
+
+    # start game loop
+    #while player hand<104
+        #players draw
+        # Player 1 drew the 9 of Hearts.
+        # Player 2 drew the 4 of Spades.
+        #blank print
+        #print # Player 1 wins the round!
+
+        #hand check function
+
+        #blank print
+        # press enter to play the next round
+    
+    #finish game func
+
+
+
+if __name__ == "__main__":
+    main()
+
