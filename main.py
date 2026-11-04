@@ -30,6 +30,9 @@ def main():
     round_count = 0
     while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
         player1.takecards(player2)
+        print(f'Player 1 has {len(player1.deck.cards)} cards.')
+        print(f'Player 2 has {len(player2.deck.cards)} cards.\n')
+        input('Press Enter to play the next round.\n')
 
     finish_game(player1, player2)
 

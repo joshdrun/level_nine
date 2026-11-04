@@ -31,8 +31,14 @@ class players:
             self.deck.cards.remove(draw1)
             opponent.deck.cards.remove(draw2)
 
+            """Dylan - Created a print statement to show cards drawn by each player."""
+            print(f"\nPlayer 1 drew the {draw1.number} of {draw1.suit}")
+            print(f"Player 2 drew the {draw2.number} of {draw2.suit}\n")
+
+
             #Gets the rank of the drawn cards by finding the index of the card's
             #number in the cards.number list.
+       
             rank1 = cards.number.index(draw1.number)
             rank2 = cards.number.index(draw2.number)
 
@@ -43,7 +49,9 @@ class players:
                 # print(f"{draw1.card_name} is higher than {draw2.card_name}")
                 self.deck.cards.extend([draw1, draw2])
                 self.deck.cards.extend(cards_in_play)
+                print(f'Player 1 wins the round!\n')
                 return
+            
             #If player 2's card is higher, it will extend player 2's deck
             #with the drawn cards and any cards that were in play during a tie
             elif rank2 > rank1:
@@ -51,13 +59,16 @@ class players:
                 """Dylan - I changed the order of the cards being added to the opponents deck to prevent an infinite game loop."""
                 opponent.deck.cards.extend([draw2, draw1])
                 opponent.deck.cards.extend(cards_in_play)
+                print(f'Player 2 wins the round!\n')
                 return
+            
             #If the cards are equal, it will add the drawn cards to the cards_in_play
             #list and prints a message that the cards are equal and to draw again.
             else:
                 # print(f"{draw1.card_name} and {draw2.card_name} are equal. Draw again.")
                 cards_in_play.extend([draw1, draw2])
                 """Dylan - I added this check to prevent an infinite game loop if one player runs out of cards during a tie. If either player has no cards left, the function will return and the game will end."""
+                print(f'War!\n')
                 if len(self.deck.cards) == 0:
                     opponent.deck.cards.extend(cards_in_play)
                     return
