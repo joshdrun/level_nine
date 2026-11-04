@@ -39,12 +39,6 @@ class cards:
         self.card_name = card_name
         
 
-# Define a method to get a random card from the deck
-    def random_card(self):
-        suit = random.choice(self.suit)
-        number = random.choice(self.number)
-        return f"{number} of {suit}"
-
 
 
 
