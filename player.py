@@ -48,7 +48,8 @@ class players:
             #with the drawn cards and any cards that were in play during a tie
             elif rank2 > rank1:
                 # print(f"{draw2.card_name} is higher than {draw1.card_name}")
-                opponent.deck.cards.extend([draw1, draw2])
+                """Dylan - I changed the order of the cards being added to the opponents deck to prevent an infinite game loop."""
+                opponent.deck.cards.extend([draw2, draw1])
                 opponent.deck.cards.extend(cards_in_play)
                 return
             #If the cards are equal, it will add the drawn cards to the cards_in_play
@@ -56,4 +57,11 @@ class players:
             else:
                 # print(f"{draw1.card_name} and {draw2.card_name} are equal. Draw again.")
                 cards_in_play.extend([draw1, draw2])
+                """Dylan - I added this check to prevent an infinite game loop if one player runs out of cards during a tie. If either player has no cards left, the function will return and the game will end."""
+                if len(self.deck.cards) == 0:
+                    opponent.deck.cards.extend(cards_in_play)
+                    return
+                elif len(opponent.deck.cards) == 0:
+                    self.deck.cards.extend(cards_in_play)
+                    return
 
