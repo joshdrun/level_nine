@@ -59,9 +59,8 @@ class players:
                 return
             
             #If the cards are equal, it will add the drawn cards to the cards_in_play
-            #list and prints a message that the cards are equal and to draw again.
+            #list and prints a message that there is War and the loop will continue until one player wins
             else:
-                # print(f"{draw1.card_name} and {draw2.card_name} are equal. Draw again.")
                 cards_in_play.extend([draw1, draw2])
                 #If a player has no cards left in their deck, the other player will win the round
                 #and collect all the cards that were in play during the tie.
