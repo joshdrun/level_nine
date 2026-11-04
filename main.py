@@ -4,10 +4,6 @@ from cards import cards
 from cards import decks
 from player import players
 
-def hand_check():
-    # Player 1 has 53 cards.
-    # Player 2 has 51 cards.
-    pass
 
 def finish_game(player1, player2):
     # Player 1 has collected all of the cards.
