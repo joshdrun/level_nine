@@ -24,10 +24,26 @@ def main():
     print('Welcome to Two-Deck War!')
 
     # start game loop
-    # while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
-    #     player1.takecards(player2)
+    round_count = 0
+    while len(player1.deck.cards) > 0 and len(player2.deck.cards) > 0:
+        player1.takecards(player2)
+        round_count += 1
+
+        if round_count % 1000 == 0:
+            print(f"Round {round_count}: "
+            f"P1 = {len(player1.deck.cards)}, "
+            f"P2 = {len(player2.deck.cards)}")
+            return
+        # print(f"\nPlayer 1 has {len(player1.deck.cards)} cards.")
+        # print(f"\nPlayer 2 has {len(player2.deck.cards)} cards.")
 
         #players draw
+
+
+
+
+
+
 
         # player1_card = player1.drawcard()
         # player2_card = player2.drawcard()

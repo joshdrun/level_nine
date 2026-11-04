@@ -40,20 +40,20 @@ class players:
             #If player 1's card is higher, it will extend player 1's deck
             #with the drawn cards and any cards that were in play during a tie
             if rank1 > rank2:
-                print(f"{draw1.card_name} is higher than {draw2.card_name}")
+                # print(f"{draw1.card_name} is higher than {draw2.card_name}")
                 self.deck.cards.extend([draw1, draw2])
                 self.deck.cards.extend(cards_in_play)
                 return
             #If player 2's card is higher, it will extend player 2's deck
             #with the drawn cards and any cards that were in play during a tie
             elif rank2 > rank1:
-                print(f"{draw2.card_name} is higher than {draw1.card_name}")
+                # print(f"{draw2.card_name} is higher than {draw1.card_name}")
                 opponent.deck.cards.extend([draw1, draw2])
                 opponent.deck.cards.extend(cards_in_play)
                 return
             #If the cards are equal, it will add the drawn cards to the cards_in_play
             #list and prints a message that the cards are equal and to draw again.
             else:
-                print(f"{draw1.card_name} and {draw2.card_name} are equal. Draw again.")
+                # print(f"{draw1.card_name} and {draw2.card_name} are equal. Draw again.")
                 cards_in_play.extend([draw1, draw2])
 
